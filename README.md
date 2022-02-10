@@ -158,9 +158,9 @@ Jika berhasil, akan memberikanmu pesan seperti: `SUCCESS: specified value was sa
 ```
 
 # Thanks to
- [![Nurutomo](https://github.com/Nurutomo.png?size=150)](https://github.com/Nurutomo) | [![koleksibot](https://github.com/koleksibot.png?size=150)](https://github.com/koleksibot) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming)
+ [![ilmanhdyt](https://github.com/Ilmanhdyt.png?size=150)](https://github.com/Nurutomo) | [![koleksibot](https://github.com/koleksibot.png?size=150)](https://github.com/koleksibot) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming)
 ----|----|----
-[Nurutomo](https://github.com/Nurutomo) | [Koleksibot](https://github.com/koleksibot) | [Istikmal](https://github.com/BochilGaming)
+[ilmanhdyt](https://github.com/ilmanhdyt) | [Koleksibot](https://github.com/koleksibot) | [Istikmal](https://github.com/BochilGaming)
  Author | yang nambah fitur | yang punya
 
 ## Donate
