@@ -18,6 +18,8 @@
 
 ---
 
+## BLACKHATBOT BIASA [Click](https://github.com/koleksibot/blackhatbot-biasa)
+
 # BLACKHAT BOT Whatsapp MD
 ## Install Module [here](https://www.mediafire.com/file/trl8cy4ba1bcimn/node_modules-master.zip/file)
 ## Information
@@ -164,4 +166,5 @@ Jika berhasil, akan memberikanmu pesan seperti: `SUCCESS: specified value was sa
  Author | yang nambah fitur | yang punya
 
 ## Donate
-- [Saweria](https://saweria.co/anonsecteaminc)
+- [Saweria](https://saweria.co/anonsecteam)
+- [Dana](https://wa.me/62895469318181)
