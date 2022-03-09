@@ -1,17 +1,12 @@
-const PhoneNumber = require('awesome-phonenumber')
-async function handler(m) {
-                let vcard = 'BEGIN:VCARD\n' // metadata of the contact card
-                    + 'VERSION:3.0\n' 
-                    + 'N:;Ilman;;;'
-                    + 'FN:Ilman\n' // full name
-                    + 'ORG:Ilman;\n' // the organization of the contact
-                    + 'TEL;type=CELL;type=VOICE;waid=6281351047727:+62 813-5104-7727\n' // WhatsApp ID + phone number
-                    + 'END:VCARD'
-                conn.sendMessage(m.chat, { contacts: { displayName: 'Ilman', contacts: [{ vcard }] } }, { quoted: m })
+const delay = time => new Promise(res => setTimeout(res, time))
+let handler = async(m, { conn }) => {
+  conn.sendContact(m.chat, global.owner[0] + '@s.whatsapp.net', conn.getName(global.owner[0] + '@s.whatsapp.net'), m)
+  await delay(500)
+  conn.reply(m.chat, `Halo kak ${await conn.getName(m.sender)} itu nomor ownerku jangan di apa-apain ya kak😖`, m)
 }
-handler.help = ['owner', 'creator']
+handler.help = ['owner']
 handler.tags = ['info']
 
-handler.command = /^(owner|creator)$/i
+handler.command = /^(owner)$/i
 
 module.exports = handler

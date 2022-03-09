@@ -2,7 +2,7 @@ let syntaxerror = require('syntax-error')
 let util = require('util')
 
 let handler  = async (m, _2) => {
-  let { conn, usedPrefix, noPrefix, args, groupMetadata } = _2
+  let { conn, usedPrefix, command, text, noPrefix, args, groupMetadata } = _2
   let _return
   let _syntax = ''
   let _text = (/^=/.test(usedPrefix) ? 'return ' : '') + noPrefix
@@ -30,22 +30,11 @@ let handler  = async (m, _2) => {
     m.exp = old
   }
 }
-handler.help = ['> ', '=> ']
+handler.help = ['>', '=>']
 handler.tags = ['advanced']
 handler.customPrefix = /^=?> /
 handler.command = /(?:)/i
 handler.rowner = true
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-
 module.exports = handler
 
 class CustomArray extends Array {

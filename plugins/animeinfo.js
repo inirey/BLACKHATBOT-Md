@@ -1,3 +1,4 @@
+const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@adiwajshing/baileys-md')
 let fetch = require('node-fetch')
 let handler = async(m, { conn, text }) => {
   if (!text) throw `Masukkan query!`
@@ -10,11 +11,34 @@ let animeingfo = `✨️ *Title:* ${title}
 💌️ *Rating:* ${rated}
 ❤️ *Score:* ${score}
 💚️ *Synopsis:* ${synopsis}
-🌐️ *URL*: ${url}`
-  conn.sendFile(m.chat, image_url, '', animeingfo, m)
+`
+  let message = await prepareWAMessageMedia({ image: await(await fetch(image_url)).buffer()}, { upload: conn.waUploadToServer })
+     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+      templateMessage: {
+            hydratedTemplate: {
+                imageMessage: message.imageMessage,
+                hydratedContentText: animeingfo,
+                hydratedFooterText: wm,
+                hydratedButtons: [{
+                  index: 0,
+                   urlButton: {
+                        displayText: `🌐️ Url`,
+                        url: `${url}`
+                    },
+                    selectedIndex: 1
+                }]
+            }
+        }
+    }), { userJid: m.participant || m.key.remoteJid, quoted: m });
+    return await conn.relayMessage(
+        m.key.remoteJid,
+        template.message,
+        { messageId: template.key.id }
+    )
+ // conn.sendFile(m.chat, image_url, '', animeingfo, m)
 }
-handler.help = ['animeinfo <judul>']
+handler.help = ['animeinfo <query>', 'anime <query>']
 handler.tags = ['anime']
-handler.command = /^(animeinfo)$/i
-//maapin fatur :<
+handler.command = /^(anime(ing?fo)?)$/i
+handler.register = true 
 module.exports = handler
