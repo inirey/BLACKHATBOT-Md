@@ -7,8 +7,9 @@ const CFonts = require('cfonts')
 const Readline = require('readline')
 const yargs = require('yargs/yargs')
 const rl = Readline.createInterface(process.stdin, process.stdout)
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 
-CFonts.say('ShiraoriBOT\nMulti-device ', {
+CFonts.say('WhatsApp Bot\nMulti Device', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']

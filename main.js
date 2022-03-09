@@ -3,7 +3,6 @@ const {
   useSingleFileAuthState,
   DisconnectReason
 } = require('@adiwajshing/baileys-md')
-const WebSocket = require('ws')
 const path = require('path')
 const fs = require('fs')
 const yargs = require('yargs/yargs')
@@ -70,7 +69,8 @@ const { state, saveState } = useSingleFileAuthState(global.authFile)
 const connectionOptions = {
   printQRInTerminal: true,
   auth: state,
-  logger: P({ level: 'debug' })
+  logger: P({ level: 'debug' }),
+  version: [2, 2204, 13]
 }
 
 global.conn = simple.makeWASocket(connectionOptions)
@@ -123,8 +123,8 @@ global.reloadHandler = function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject\n\n@desc'
-  conn.bye = 'Selamat tinggal @user!'
+  conn.welcome = 'Hallo Sayang\nSelamat datang wahai Member Baru, di grup @subject\n\n@desc'
+  conn.bye = 'Sipp! Beban Berkurang satu'
   conn.spromote = '@user sekarang admin!'
   conn.sdemote = '@user sekarang bukan admin!'
   conn.handler = handler.handler.bind(conn)

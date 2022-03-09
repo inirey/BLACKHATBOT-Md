@@ -1,1 +1,1 @@
-web: node .
+worker: npm i pino && npm start
