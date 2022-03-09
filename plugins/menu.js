@@ -9,8 +9,8 @@ let fetch = require('node-fetch')
 let { perfomance } = require('perf_hooks')
 let moment = require('moment-timezone')
 const defaultMenu = {
-          before: `*Bot ini masih tahap pengembangan, jika ada bug eror fitur harap laporkan ke owner atau developer bot*
-Klik disini=>%readmore`.trimStart(),
+          before: `*Hallo Kak 👋 Saya BLACKHATBOT, Jika Ada Sebuah Bug Atau Error Dalam Fitur Harap Laporkan Ke Owner Atau Developer Bot Tulis Aja !owner Terima Kasih*
+Klik Disini Kak=>%readmore`.trimStart(),
   header: '╭─「 *%category* 」',
   body: '│ • %cmd %islimit %isPremium',
   footer: '╰────\n',
@@ -191,21 +191,21 @@ let handler = async (m, { conn, usedPrefix: _p, args, command, DevMode }) => {
     let waktuwib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
     
 let aoa = `${ucapan()} ${name}.`.trim()
-let anu = `*─────❑ 「 RULES 」 ❑─────*
- ☞ Dilarang Spam ❌
-☞ Beri Jeda 5 Detik 💤
-☞ Dilarang Buat Sticker Gore 🚷
-☞ Dilarang Buat Sticker 18+ 🔞
-☞ Dilarang Buat Aneh Aneh 📵
-☞ Dilarang Buat Mainan ⛔
-☞ Dilarang Download Di Atas 35mb Nanti Wa Aing Lag Anjg 🗿
+let anu = `*─────❑ 「 RULES BOT 」 ❑─────*
+☞ *Dilarang Spam* ❌
+☞ *Beri Jeda 5 Detik* 💤
+☞ *Dilarang Buat Sticker Gore* 🚷
+☞ *Dilarang Buat Sticker 18+* 🔞
+☞ *Dilarang Buat Aneh Aneh* 📵
+☞ *Dilarang Buat Mainan* ⛔
+☞ *Dilarang Download Di Atas 35mb Nanti Wa Aing Lag Anjg* 🗿
 
 ❏ *I N F O R M A T I O N*
-≻ Ⓣ : Text
-≻ ⓔ : Efek
-≻ Ⓛ : Limit
-≻ Ⓟ : Premium
-≻ ⓜ : Maintance`.trim()
+≻ Ⓣ : *Text*
+≻ ⓔ : *Efek*
+≻ Ⓛ : *Limit*
+≻ Ⓟ : *Premium*
+≻ ⓜ : *Maintance*`.trim()
 let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
     return {
       help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
@@ -490,7 +490,7 @@ let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //let pp = await conn.profilePictureUrl(conn.user.jid, 'image').catch(_ => path.join(__dirname, '../src/avatar_contact.png'))
-    await conn.send3TemplateButtonLoc(m.chat, text.trim(), wm, await(await require('node-fetch')(img)).buffer(), `🏅Owner`, `${_p}owner`, `🎖ThanksTo`, `${_p}tqto`, `🎗  Info Bot  🎗`, `${_p}infobot`, m)
+    await conn.send3TemplateButtonLoc(m.chat, text.trim(), wm, await(await require('node-fetch')(img)).buffer(), `🏅 O W N E R 🏅`, `${_p}owner`, `🎖T H A N K S T O 🎖`, `${_p}tqto`, `🚀  SPEED BOT  🚀`, `${_p}infobot`, m)
     } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
