@@ -39,14 +39,15 @@
 <h3 align="center">Made by :</h3>
 <p align="center">
   <a href="https://github.com/koleksibot"><img src="https://github.com/koleksibot.png?size=128" height="128" width="128" /></a>
+  <a href="https://github.com/raselcomel"><img src="https://github.com/raselcomel.png?size=128" height="128" width="128" /></a>
   <a href="https://github.com/ilhamhdyt"><img src="https://github.com/ahmadchen.png?size=128" height="128" width="128" /></a>
 </p>
 
-## Tester Bot
+## Testing Bot
 * <img src="https://i.ibb.co/64CtK3V/Screenshot-2021-12-25-03-35-07.png" height="500" width="500" /></a>
 * Jika kamu menemukan bug jangan lupa buka Issues
 * Info Lebih Lanjut, Chat [Owner-BLACKHATBOT](https://wa.me/62895369318181)
-* Kamu bisa testing fitur Coming Soon [disini](https://wa.me/62895369318181?text=.menu)
+* Kamu bisa testing fitur Coming Soon [disini](https://wa.me/62895369318181?text=#menu)
 
 ## How To Change Menu Display
 ----
@@ -164,7 +165,7 @@ Jika berhasil, akan memberikanmu pesan seperti: `SUCCESS: specified value was sa
 # Thanks to
  [![ilmanhdyt](https://github.com/Ilmanhdyt.png?size=150)](https://github.com/Nurutomo) | [![koleksibot](https://github.com/koleksibot.png?size=150)](https://github.com/koleksibot) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming)
 ----|----|----
-[ilmanhdyt](https://github.com/ilmanhdyt) | [Koleksibot](https://github.com/koleksibot) | [Istikmal](https://github.com/BochilGaming)
+[ilmanhdyt](https://github.com/ilmanhdyt) | [Koleksibot](https://github.com/koleksibot) | [raselcomel](https://github.com/raselcomel)
  Author | yang nambah fitur | yang punya
 
 ## Donate
